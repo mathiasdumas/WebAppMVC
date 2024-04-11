@@ -26,3 +26,4 @@
 /Users/barbara/Projects/MVCCourse/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cache
 /Users/barbara/Projects/MVCCourse/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cs
 /Users/barbara/Projects/MVCCourse/WebApp/bin/Debug/net8.0/WebApp.staticwebassets.runtime.json
+/Users/barbara/Projects/MVCCourse/WebApp/obj/Debug/net8.0/WebApp.sourcelink.json

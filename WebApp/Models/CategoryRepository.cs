@@ -38,7 +38,7 @@ namespace WebApp.Models
 		{
 			if (categoryId != category.CategoryId) return;
 
-			var categoryToUpdate = GetCategoryById(categoryId);
+			var categoryToUpdate = categories.FirstOrDefault(x => x.CategoryId == categoryId);
 			if (categoryToUpdate != null)
 			{
 				categoryToUpdate.Name = category.Name;
@@ -51,7 +51,7 @@ namespace WebApp.Models
 			var category = categories.FirstOrDefault(x => x.CategoryId == categoryId);
 			if (category != null)
 			{
-				categories.Remove(category);
+				categories.Remove(category); 
 			}
 		}
 	}

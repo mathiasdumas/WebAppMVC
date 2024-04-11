@@ -15,6 +15,8 @@
     <None Remove="Views\Categories\" />
     <None Remove="Models\" />
     <None Remove="Views\Shared\" />
+    <None Remove="Views\Products\" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -26,6 +28,8 @@
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
+    <Folder Include="Views\Products\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
