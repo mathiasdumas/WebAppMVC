@@ -38,7 +38,7 @@
             }
         }
 
-        public static Product? GetProductById(int productId, bool loadCategory)
+        public static Product? GetProductById(int productId, bool loadCategory = false)
         {
             var product = _products.FirstOrDefault(x => x.ProductId == productId);
             if (product != null)
@@ -56,6 +56,8 @@
                 {
                     prod.Category = CategoryRepository.GetCategoryById(prod.CategoryId.Value);
                 }
+
+                return prod;
             }
 
             return null;
