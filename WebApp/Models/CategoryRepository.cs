@@ -3,7 +3,7 @@ namespace WebApp.Models
 {
 	public static class CategoryRepository
 	{
-		private static List<Category> categories = new List<Category>()
+		private static List<Category> _categories = new List<Category>()
 		{
 			new Category { CategoryId = 1, Name = "Beverate", Description = "Beverage" },
 			new Category { CategoryId = 2, Name = "Bakery", Description = "Bakery" },
@@ -12,16 +12,24 @@ namespace WebApp.Models
 
 		public static void AddCategory(Category category)
 		{
-			var maxId = categories.Max(x => x.CategoryId);
-			category.CategoryId = maxId + 1;
-			categories.Add(category);
+			if (_categories != null && _categories.Count > 0)
+			{
+                var maxId = _categories.Max(x => x.CategoryId);
+                category.CategoryId = maxId + 1;
+            } else
+			{
+				category.CategoryId = 1;
+			}
+
+			if (_categories == null) _categories = new List<Category>();
+			_categories.Add(category);
 		}
 
-		public static List<Category> GetCategories() => categories;
+		public static List<Category> GetCategories() => _categories;
 
 		public static Category? GetCategoryById(int categoryId)
 		{
-			var category = categories.FirstOrDefault(x => x.CategoryId == categoryId);
+			var category = _categories.FirstOrDefault(x => x.CategoryId == categoryId);
 			if (category != null)
 			{
 				return new Category
@@ -38,7 +46,7 @@ namespace WebApp.Models
 		{
 			if (categoryId != category.CategoryId) return;
 
-			var categoryToUpdate = categories.FirstOrDefault(x => x.CategoryId == categoryId);
+			var categoryToUpdate = _categories.FirstOrDefault(x => x.CategoryId == categoryId);
 			if (categoryToUpdate != null)
 			{
 				categoryToUpdate.Name = category.Name;
@@ -48,10 +56,10 @@ namespace WebApp.Models
 
 		public static void DeleteCategory(int categoryId)
 		{
-			var category = categories.FirstOrDefault(x => x.CategoryId == categoryId);
+			var category = _categories.FirstOrDefault(x => x.CategoryId == categoryId);
 			if (category != null)
 			{
-				categories.Remove(category); 
+				_categories.Remove(category); 
 			}
 		}
 	}

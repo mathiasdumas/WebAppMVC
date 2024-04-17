@@ -70,6 +70,20 @@ namespace WebApp.Controllers
             productViewModel.Categories = CategoryRepository.GetCategories();
             return View(productViewModel);
         }
+
+        public IActionResult Delete(int id)
+        {
+            ProductsRepository.DeleteProduct(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult ProductsByCategoryPartial(int categoryId)
+        {
+            var products = ProductsRepository.GetProductsByCateogryId(categoryId);
+            return PartialView("_Product", products);
+        }
+
+        
     }
 }
 

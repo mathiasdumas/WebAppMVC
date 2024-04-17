@@ -1,0 +1,80 @@
+﻿@model SalesViewModel
+@section title {
+<div class="row">
+    <div class="col-7"><h3>Cashier's Console</h3></div>
+    <div class="col-2"><label for="cashier">Cashier Name : </label></div>
+    <div class="col-3">@* Display Cashier's name here'*@</div>
+</div>
+}
+
+<br />
+<div class="row">
+    <div class="col-4">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        @*Category selection*@
+        <select asp-for="SelectedCategoryId" class="form-control">
+            <option>- Please select -</option>
+            @if (Model.Categories != null && Model.Categories.Count() > 0)
+                @foreach (var cat in Model.Categories)
+                {
+                    <option value="@cat.CategoryId">@cat.Name</option>
+                }
+        </select>
+        <br />
+        <div id="productsPartial">
+            @*Product List*@
+        </div>
+        <br />
+        <div id="productsDetails">
+            @*Product details*@
+        </div>
+        <form method="post" asp-controller="sales" asp-action="sell" id="formSale">
+            <input asp-for="SelectedProductId" type="hidden" />
+            <div class="form-group mt-2 mb-2">
+                <label asp-for="QuantityToSell"></label>
+                <input asp-for="QuantityToSell" class="form-control" type="number" min="1" />
+            </div>
+            <br />
+            <div class="form-group mt-2">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </form>
+        @*Sales form*@
+    </div>
+    <div class="col">
+        @*List of transactions*@
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () { 
+            $("#formSale").hide();
+            $("#QuantityToSell").val("");
+
+            $("#SelectedCategoryId").on("change", function () {
+                $("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() })
+                $("#productsDetails").html("");
+            })
+            $("#productsPartial").on('click', '.product-row', function () {
+                $(".product-row").removeClass('highlight');
+                $(this).addClass('highlight');
+
+                var productId = $(this).attr('product-id');
+
+                $("#productsDetails").load("/sales/SellProductPartial", { productId: productId })
+
+                if (productId > 0) {
+                    $("#SelectedProductId").val(productId)
+                    $("#formSale").show();
+                } else {
+                    $("#SelectedProductId").val("")
+                    $("#formSale").hide();
+                }
+            })
+
+
+        });
+    </script>
+}
+

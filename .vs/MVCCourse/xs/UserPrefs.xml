@@ -1,37 +1,47 @@
 ﻿<Properties StartupConfiguration="{52169206-4986-4DBA-8042-C06231426DEA}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebApp/Views/Categories/Edit.cshtml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebApp/Views/Sales/Index.cshtml">
     <Files>
-      <File FileName="WebApp/Program.cs" Line="13" Column="1" />
-      <File FileName="WebApp/Controllers/HomeController.cs" Line="16" Column="24" />
-      <File FileName="WebApp/Views/index.cshtml" Line="1" Column="1" />
-      <File FileName="WebApp/Controllers/CategoriesController.cs" Line="23" Column="84" />
-      <File FileName="WebApp/Views/Categories/Index.cshtml" Line="1" Column="1" />
-      <File FileName="WebApp/Models/Category.cs" Line="8" Column="58" />
-      <File FileName="WebApp/Views/Categories/Edit.cshtml" Line="12" Column="27" />
-      <File FileName="WebApp/Views/Shared/_Layout.cshtml" Line="41" Column="9" />
-      <File FileName="WebApp/Views/_ViewStart.cshtml" Line="3" Column="2" />
-      <File FileName="WebApp/appsettings.json" Line="1" Column="1" />
-      <File FileName="WebApp/Models/CategoryRepository.cs" Line="54" Column="33" />
-      <File FileName="WebApp/Views/_ViewImports.cshtml" Line="1" Column="22" />
+      <File FileName="WebApp/Controllers/ProductsController.cs" />
+      <File FileName="WebApp/Controllers/CategoriesController.cs" />
+      <File FileName="WebApp/Views/Products/Add.cshtml" />
+      <File FileName="WebApp/Views/Products/Index.cshtml" />
+      <File FileName="WebApp/Models/Product.cs" />
+      <File FileName="WebApp/Models/ProductsRepository.cs" />
+      <File FileName="WebApp/Views/Products/Edit.cshtml" />
+      <File FileName="WebApp/ViewModels/ProductViewModel.cs" />
+      <File FileName="WebApp/Views/Products/_Products.cshtml" />
+      <File FileName="WebApp/Views/Categories/_Category.cshtml" />
+      <File FileName="WebApp/Controllers/HomeController.cs" />
+      <File FileName="WebApp/Views/Categories/Add.cshtml" />
+      <File FileName="WebApp/Views/Categories/Edit.cshtml" />
+      <File FileName="WebApp/Views/Categories/Index.cshtml" />
+      <File FileName="WebApp/Models/CategoryRepository.cs" />
+      <File FileName="WebApp/Models/Category.cs" />
+      <File FileName="WebApp/Controllers/SalesController.cs" />
+      <File FileName="WebApp/ViewModels/SalesViewModel.cs" />
+      <File FileName="WebApp/Views/Products/_Product.cshtml" />
+      <File FileName="WebApp/Views/Shared/_Layout.cshtml" />
+      <File FileName="WebApp/Program.cs" />
+      <File FileName="WebApp/Views/Sales/Index.cshtml" Line="47" Column="7" />
+      <File FileName="WebApp/wwwroot/css/site.css" />
+      <File FileName="WebApp/Views/Sales/_SellProduct.cshtml" />
+      <File FileName="WebApp/ViewModels/Validations/SalesViewModel_EnsureProperQuantity.cs" />
+      <File FileName="WebApp/Models/Transaction.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MVCCourse" expanded="True">
-            <Node name="WebApp" expanded="True">
+            <Node name="WebApp" expanded="True" selected="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Categories" expanded="True">
-                  <Node name="Edit.cshtml" selected="True" />
-                </Node>
-                <Node name="Home" expanded="True" />
+                <Node name="Products" expanded="True" />
+                <Node name="Sales" expanded="True" />
                 <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="lib" expanded="True">
-                  <Node name="bootstrap" expanded="True" />
-                </Node>
               </Node>
             </Node>
           </Node>
@@ -40,10 +50,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WebApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -27,14 +27,12 @@
             }
         </tbody>
     </table>
-    <br/>
-    <a class="btn btn-primary" asp-controller="categories" asp-action="add">Add</a>
+    <br />
 }
+<a class="btn btn-primary" asp-controller="categories" asp-action="add">Add</a>
 
 @section Scripts{
-    <script>
-        function confirmDelete() {
+    <script>function confirmDelete() {
             return confirm("Are you sure you want to delete this category");
-        }
-    </script>
+        }</script>
 }
