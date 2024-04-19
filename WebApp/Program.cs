@@ -1,4 +1,14 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
+using WebApp.Context;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContextPool<MarketContext>(option =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    option.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 builder.Services.AddControllersWithViews();
 

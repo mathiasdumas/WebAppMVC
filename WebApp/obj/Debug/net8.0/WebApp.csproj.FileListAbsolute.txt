@@ -236,3 +236,5 @@
 /Users/barbara/Projects/MVCCourse/WebApp/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/barbara/Projects/MVCCourse/WebApp/obj/Debug/net8.0/WebApp.csproj.AssemblyReference.cache
 /Users/barbara/Projects/MVCCourse/WebApp/obj/Debug/net8.0/WebApp.csproj.CopyComplete
+/Users/barbara/Projects/MVCCourse/WebApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/barbara/Projects/MVCCourse/WebApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll

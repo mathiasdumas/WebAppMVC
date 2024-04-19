@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{52169206-4986-4DBA-8042-C06231426DEA}|https">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebApp/Views/Sales/Index.cshtml">
+  <MonoDevelop.Ide.ItemProperties.WebApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebApp/Context/MarketContext.cs">
     <Files>
       <File FileName="WebApp/Controllers/ProductsController.cs" />
       <File FileName="WebApp/Controllers/CategoriesController.cs" />
@@ -24,34 +24,37 @@
       <File FileName="WebApp/Views/Products/_Product.cshtml" />
       <File FileName="WebApp/Views/Shared/_Layout.cshtml" />
       <File FileName="WebApp/Program.cs" />
-      <File FileName="WebApp/Views/Sales/Index.cshtml" Line="47" Column="7" />
+      <File FileName="WebApp/Views/Sales/Index.cshtml" />
       <File FileName="WebApp/wwwroot/css/site.css" />
       <File FileName="WebApp/Views/Sales/_SellProduct.cshtml" />
       <File FileName="WebApp/ViewModels/Validations/SalesViewModel_EnsureProperQuantity.cs" />
       <File FileName="WebApp/Models/Transaction.cs" />
+      <File FileName="WebApp/appsettings.json" />
+      <File FileName="WebApp/appsettings.Development.json" />
+      <File FileName="WebApp/Context/MarketContext.cs" Line="22" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MVCCourse" expanded="True">
             <Node name="WebApp" expanded="True" selected="True">
+              <Node name="Context" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Products" expanded="True" />
-                <Node name="Sales" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="MVCCourse" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.WebApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
